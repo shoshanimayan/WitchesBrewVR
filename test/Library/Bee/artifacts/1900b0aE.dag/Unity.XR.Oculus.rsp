@@ -106,10 +106,13 @@
 -define:ENABLE_TILEMAP
 -define:ENABLE_TIMELINE
 -define:ENABLE_INPUT_SYSTEM
+-define:CLAYXELS_URP
+-define:CLAYXELS_RETOPO
 -define:UNITY_INPUT_SYSTEM
 -define:XR_MGMT_GTE_320
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
+-r:"Assets/Clayxels/Editor/retopo/geometry3.dll"
 -r:"C:/Users/Shosh/Documents/WitchesBrewVR/test/Library/PackageCache/com.unity.visualscripting@1.5.2/Editor/VisualScripting.Core/Dependencies/DotNetZip/IonicZip.dll"
 -r:"C:/Users/Shosh/Documents/WitchesBrewVR/test/Library/PackageCache/com.unity.visualscripting@1.5.2/Editor/VisualScripting.Core/Dependencies/YamlDotNet/YamlDotNet.dll"
 -r:"C:/Users/Shosh/Documents/WitchesBrewVR/test/Library/PackageCache/com.unity.visualscripting@1.5.2/Runtime/VisualScripting.Core/Dependencies/MiscUtil/MiscUtil.dll"

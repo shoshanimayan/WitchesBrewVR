@@ -106,8 +106,11 @@
 -define:ENABLE_TILEMAP
 -define:ENABLE_TIMELINE
 -define:ENABLE_INPUT_SYSTEM
+-define:CLAYXELS_URP
+-define:CLAYXELS_RETOPO
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
+-r:"Assets/Clayxels/Editor/retopo/geometry3.dll"
 -r:"C:/Users/Shosh/Documents/WitchesBrewVR/test/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll"
 -r:"C:/Users/Shosh/Documents/WitchesBrewVR/test/Library/PackageCache/com.unity.visualscripting@1.5.2/Editor/VisualScripting.Core/Dependencies/DotNetZip/IonicZip.dll"
 -r:"C:/Users/Shosh/Documents/WitchesBrewVR/test/Library/PackageCache/com.unity.visualscripting@1.5.2/Editor/VisualScripting.Core/Dependencies/YamlDotNet/YamlDotNet.dll"
@@ -351,9 +354,11 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.XR.LegacyInputHelpers.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/VSSettingsProvider.ref.dll"
+"Assets/Clayxels/Editor/ClayxelInspector.cs"
+"Assets/Clayxels/Editor/retopo/RetopoUtils.cs"
 "Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs"
 -langversion:8.0
-
+/unsafe+
 /deterministic
 /optimize+
 /debug:portable
