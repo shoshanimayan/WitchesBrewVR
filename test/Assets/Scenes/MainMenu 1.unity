@@ -123,58 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!21 &3039784
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Clayxels/ClayxelURPShaderMicroVoxelASE
-  m_Shader: {fileID: 4800000, guid: 7d346ac7e85afd94baf1ae981f60d88f, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: e1e6da454f95b40469ddddb65d69ebfe, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _texcoord:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _AlphaCutoff: 0.5
-    - _Metallic: 0
-    - _Smoothness: 0
-    - _alphaCutout: 0.5
-    - _backFillAlpha: 1
-    - _backFillDark: 1
-    - _emissionPower: 0
-    - _roughColor: 0
-    - _roughOrientX: 0
-    - _roughOrientY: 0
-    - _roughOrientZ: 0
-    - _roughPos: 0
-    - _roughSize: 0.3
-    - _roughTwist: 0
-    - _splatBillboard: 0
-    - _splatSizeMult: 0.5
-    - _sssRadius: 1
-    - _subSurfaceScatter: 0
-    m_Colors:
-    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _emissiveColor: {r: 1, g: 1, b: 1, a: 1}
-    - _sssCenter: {r: 0, g: 0, b: 0, a: 0}
-  m_BuildTextureStacks: []
 --- !u!1 &5109573
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,6 +176,58 @@ MonoBehaviour:
   clayObjectId: 1
   numSolids: 1
   splineSubdiv: 3
+--- !u!21 &81144928
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Clayxels/ClayxelURPShaderMicroVoxelASE
+  m_Shader: {fileID: 4800000, guid: 7d346ac7e85afd94baf1ae981f60d88f, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: e1e6da454f95b40469ddddb65d69ebfe, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _Metallic: 0
+    - _Smoothness: 0
+    - _alphaCutout: 0.5
+    - _backFillAlpha: 1
+    - _backFillDark: 1
+    - _emissionPower: 0
+    - _roughColor: 0
+    - _roughOrientX: 0
+    - _roughOrientY: 0
+    - _roughOrientZ: 0
+    - _roughPos: 0
+    - _roughSize: 0.3
+    - _roughTwist: 0
+    - _splatBillboard: 0
+    - _splatSizeMult: 0.5
+    - _sssRadius: 1
+    - _subSurfaceScatter: 0
+    m_Colors:
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _emissiveColor: {r: 1, g: 1, b: 1, a: 1}
+    - _sssCenter: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1 &89536223
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,6 +346,7 @@ GameObject:
   - component: {fileID: 226627059}
   - component: {fileID: 226627061}
   - component: {fileID: 226627060}
+  - component: {fileID: 226627062}
   m_Layer: 0
   m_Name: water
   m_TagString: Untagged
@@ -361,8 +362,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 226627057}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.059, z: 0}
+  m_LocalScale: {x: 1.05, y: 1, z: 1}
   m_Children:
   - {fileID: 1576006608}
   m_Father: {fileID: 975186465}
@@ -452,6 +453,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 226627057}
   m_Mesh: {fileID: 4300000, guid: 8d64d8efa22d1a64ca1f05eea13f8deb, type: 2}
+--- !u!64 &226627062
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226627057}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 8d64d8efa22d1a64ca1f05eea13f8deb, type: 2}
 --- !u!1 &231542081
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,7 +483,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &231542082
 Transform:
   m_ObjectHideFlags: 0
@@ -961,58 +976,6 @@ MonoBehaviour:
       m_SingletonActionBindings: []
     m_Reference: {fileID: 875253871413052681, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ButtonPressPoint: 0.5
---- !u!21 &245673532
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Clayxels/ClayxelURPShaderMicroVoxelASE
-  m_Shader: {fileID: 4800000, guid: 7d346ac7e85afd94baf1ae981f60d88f, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: e1e6da454f95b40469ddddb65d69ebfe, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _texcoord:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _AlphaCutoff: 0.5
-    - _Metallic: 0
-    - _Smoothness: 0
-    - _alphaCutout: 0.5
-    - _backFillAlpha: 1
-    - _backFillDark: 1
-    - _emissionPower: 0
-    - _roughColor: 0
-    - _roughOrientX: 0
-    - _roughOrientY: 0
-    - _roughOrientZ: 0
-    - _roughPos: 0
-    - _roughSize: 0.3
-    - _roughTwist: 0
-    - _splatBillboard: 0
-    - _splatSizeMult: 0.5
-    - _sssRadius: 1
-    - _subSurfaceScatter: 0
-    m_Colors:
-    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _emissiveColor: {r: 1, g: 1, b: 1, a: 1}
-    - _sssCenter: {r: 0, g: 0, b: 0, a: 0}
-  m_BuildTextureStacks: []
 --- !u!1 &300025339
 GameObject:
   m_ObjectHideFlags: 0
@@ -1029,7 +992,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &300025340
 Transform:
   m_ObjectHideFlags: 0
@@ -1135,7 +1098,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &370898170
 Transform:
   m_ObjectHideFlags: 0
@@ -1172,6 +1135,119 @@ MonoBehaviour:
   clayObjectId: 3
   numSolids: 1
   splineSubdiv: 3
+--- !u!1 &377518587
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 377518588}
+  - component: {fileID: 377518592}
+  - component: {fileID: 377518591}
+  - component: {fileID: 377518590}
+  - component: {fileID: 377518589}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &377518588
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377518587}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.72, y: 1.25, z: 3.1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_Children: []
+  m_Father: {fileID: 1315465550}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &377518589
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377518587}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &377518590
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377518587}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &377518591
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377518587}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &377518592
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377518587}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &391412766
 GameObject:
   m_ObjectHideFlags: 0
@@ -1188,7 +1264,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &391412767
 Transform:
   m_ObjectHideFlags: 0
@@ -1225,59 +1301,104 @@ MonoBehaviour:
   clayObjectId: 2
   numSolids: 1
   splineSubdiv: 3
---- !u!21 &497358135
-Material:
-  serializedVersion: 6
+--- !u!1 &498086958
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Clayxels/ClayxelURPShaderMicroVoxelASE
-  m_Shader: {fileID: 4800000, guid: 7d346ac7e85afd94baf1ae981f60d88f, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: e1e6da454f95b40469ddddb65d69ebfe, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _texcoord:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _AlphaCutoff: 0.5
-    - _Metallic: 0
-    - _Smoothness: 0
-    - _alphaCutout: 0.5
-    - _backFillAlpha: 1
-    - _backFillDark: 1
-    - _emissionPower: 0
-    - _roughColor: 0
-    - _roughOrientX: 0
-    - _roughOrientY: 0
-    - _roughOrientZ: 0
-    - _roughPos: 0
-    - _roughSize: 0.3
-    - _roughTwist: 0
-    - _splatBillboard: 0
-    - _splatSizeMult: 0.5
-    - _sssRadius: 1
-    - _subSurfaceScatter: 0
-    m_Colors:
-    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _emissiveColor: {r: 1, g: 1, b: 1, a: 1}
-    - _sssCenter: {r: 0, g: 0, b: 0, a: 0}
-  m_BuildTextureStacks: []
---- !u!21 &515988438
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 498086959}
+  - component: {fileID: 498086962}
+  - component: {fileID: 498086961}
+  - component: {fileID: 498086960}
+  m_Layer: 0
+  m_Name: Plane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &498086959
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498086958}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.0258, y: -0, z: 0.0085}
+  m_LocalScale: {x: 0.6980582, y: 1, z: 0.69492733}
+  m_Children: []
+  m_Father: {fileID: 888759134}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &498086960
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498086958}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &498086961
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498086958}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &498086962
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498086958}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!21 &569843990
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -1386,7 +1507,7 @@ MonoBehaviour:
   chunksX: 2
   chunksY: 2
   chunksZ: 2
-  material: {fileID: 1601221264}
+  material: {fileID: 1574202801}
   castShadows: 1
   receiveShadows: 1
   storeAssetPath: 
@@ -1399,6 +1520,110 @@ MonoBehaviour:
   claymationAnimClip: {fileID: 0}
   claymationStartFrame: 0
   claymationEndFrame: 0
+--- !u!21 &746839649
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Clayxels/ClayxelURPShaderMicroVoxelASE
+  m_Shader: {fileID: 4800000, guid: 7d346ac7e85afd94baf1ae981f60d88f, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: e1e6da454f95b40469ddddb65d69ebfe, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _Metallic: 0
+    - _Smoothness: 0
+    - _alphaCutout: 0.5
+    - _backFillAlpha: 1
+    - _backFillDark: 1
+    - _emissionPower: 0
+    - _roughColor: 0
+    - _roughOrientX: 0
+    - _roughOrientY: 0
+    - _roughOrientZ: 0
+    - _roughPos: 0
+    - _roughSize: 0.3
+    - _roughTwist: 0
+    - _splatBillboard: 0
+    - _splatSizeMult: 0.5
+    - _sssRadius: 1
+    - _subSurfaceScatter: 0
+    m_Colors:
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _emissiveColor: {r: 1, g: 1, b: 1, a: 1}
+    - _sssCenter: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
+--- !u!21 &770659724
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Clayxels/ClayxelURPShaderMicroVoxelASE
+  m_Shader: {fileID: 4800000, guid: 7d346ac7e85afd94baf1ae981f60d88f, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: e1e6da454f95b40469ddddb65d69ebfe, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _Metallic: 0
+    - _Smoothness: 0
+    - _alphaCutout: 0.5
+    - _backFillAlpha: 1
+    - _backFillDark: 1
+    - _emissionPower: 0
+    - _roughColor: 0
+    - _roughOrientX: 0
+    - _roughOrientY: 0
+    - _roughOrientZ: 0
+    - _roughPos: 0
+    - _roughSize: 0.3
+    - _roughTwist: 0
+    - _splatBillboard: 0
+    - _splatSizeMult: 0.5
+    - _sssRadius: 1
+    - _subSurfaceScatter: 0
+    m_Colors:
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _emissiveColor: {r: 1, g: 1, b: 1, a: 1}
+    - _sssCenter: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1 &842695765
 GameObject:
   m_ObjectHideFlags: 0
@@ -1564,7 +1789,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &878270184
 Transform:
   m_ObjectHideFlags: 0
@@ -1664,6 +1889,7 @@ GameObject:
   m_Component:
   - component: {fileID: 888759134}
   - component: {fileID: 888759135}
+  - component: {fileID: 888759136}
   m_Layer: 0
   m_Name: stage
   m_TagString: Untagged
@@ -1683,6 +1909,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 1822156035}
+  - {fileID: 498086959}
   m_Father: {fileID: 975186465}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1707,10 +1934,10 @@ MonoBehaviour:
   chunksX: 1
   chunksY: 1
   chunksZ: 1
-  material: {fileID: 245673532}
+  material: {fileID: 1746467879}
   castShadows: 1
   receiveShadows: 1
-  storeAssetPath: 
+  storeAssetPath: stage
   frozen: 0
   clayObjectsOrderLocked: 1
   autoBounds: 0
@@ -1720,6 +1947,48 @@ MonoBehaviour:
   claymationAnimClip: {fileID: 0}
   claymationStartFrame: 0
   claymationEndFrame: 0
+--- !u!23 &888759136
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888759133}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 58813bf60835c3f43b4a9b84d5728ac8, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &897174272
 GameObject:
   m_ObjectHideFlags: 0
@@ -1844,7 +2113,7 @@ MonoBehaviour:
   chunksX: 2
   chunksY: 2
   chunksZ: 2
-  material: {fileID: 3039784}
+  material: {fileID: 81144928}
   castShadows: 1
   receiveShadows: 1
   storeAssetPath: 
@@ -1975,6 +2244,9 @@ GameObject:
   m_Component:
   - component: {fileID: 980594591}
   - component: {fileID: 980594592}
+  - component: {fileID: 980594594}
+  - component: {fileID: 980594593}
+  - component: {fileID: 980594595}
   m_Layer: 0
   m_Name: coldren
   m_TagString: Untagged
@@ -1990,7 +2262,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 980594590}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.146, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1526806615}
@@ -2008,7 +2280,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 980594590}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf51d6fd97243134dbf9d48bd3107215, type: 3}
   m_Name: 
@@ -2022,11 +2294,11 @@ MonoBehaviour:
   chunksX: 2
   chunksY: 1
   chunksZ: 3
-  material: {fileID: 1169728388}
+  material: {fileID: 770659724}
   castShadows: 1
   receiveShadows: 1
-  storeAssetPath: 
-  frozen: 0
+  storeAssetPath: coldren
+  frozen: 1
   clayObjectsOrderLocked: 1
   autoBounds: 0
   renderMode: 1
@@ -2035,6 +2307,70 @@ MonoBehaviour:
   claymationAnimClip: {fileID: 0}
   claymationStartFrame: 0
   claymationEndFrame: 0
+--- !u!23 &980594593
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980594590}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: e3c9519047b0c174f8bf28759320122e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &980594594
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980594590}
+  m_Mesh: {fileID: 4300000, guid: e86f1e01381c2ba488d139199eba04e2, type: 2}
+--- !u!64 &980594595
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980594590}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: e86f1e01381c2ba488d139199eba04e2, type: 2}
 --- !u!1 &998312353
 GameObject:
   m_ObjectHideFlags: 0
@@ -2141,58 +2477,6 @@ MonoBehaviour:
   clayObjectId: 2
   numSolids: 1
   splineSubdiv: 3
---- !u!21 &1169728388
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Clayxels/ClayxelURPShaderMicroVoxelASE
-  m_Shader: {fileID: 4800000, guid: 7d346ac7e85afd94baf1ae981f60d88f, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: e1e6da454f95b40469ddddb65d69ebfe, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _texcoord:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _AlphaCutoff: 0.5
-    - _Metallic: 0
-    - _Smoothness: 0
-    - _alphaCutout: 0.5
-    - _backFillAlpha: 1
-    - _backFillDark: 1
-    - _emissionPower: 0
-    - _roughColor: 0
-    - _roughOrientX: 0
-    - _roughOrientY: 0
-    - _roughOrientZ: 0
-    - _roughPos: 0
-    - _roughSize: 0.3
-    - _roughTwist: 0
-    - _splatBillboard: 0
-    - _splatSizeMult: 0.5
-    - _sssRadius: 1
-    - _subSurfaceScatter: 0
-    m_Colors:
-    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _emissiveColor: {r: 1, g: 1, b: 1, a: 1}
-    - _sssCenter: {r: 0, g: 0, b: 0, a: 0}
-  m_BuildTextureStacks: []
 --- !u!1 &1207448828
 GameObject:
   m_ObjectHideFlags: 0
@@ -2209,7 +2493,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1207448829
 Transform:
   m_ObjectHideFlags: 0
@@ -2299,6 +2583,37 @@ MonoBehaviour:
   clayObjectId: 1
   numSolids: 1
   splineSubdiv: 3
+--- !u!1 &1315465549
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1315465550}
+  m_Layer: 0
+  m_Name: props
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1315465550
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315465549}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 377518588}
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1365438068
 GameObject:
   m_ObjectHideFlags: 0
@@ -2355,7 +2670,7 @@ MonoBehaviour:
   chunksX: 2
   chunksY: 2
   chunksZ: 2
-  material: {fileID: 515988438}
+  material: {fileID: 1989483827}
   castShadows: 1
   receiveShadows: 1
   storeAssetPath: 
@@ -2514,7 +2829,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1526806615
 Transform:
   m_ObjectHideFlags: 0
@@ -2551,6 +2866,58 @@ MonoBehaviour:
   clayObjectId: 0
   numSolids: 1
   splineSubdiv: 3
+--- !u!21 &1574202801
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Clayxels/ClayxelURPShaderMicroVoxelASE
+  m_Shader: {fileID: 4800000, guid: 7d346ac7e85afd94baf1ae981f60d88f, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: e1e6da454f95b40469ddddb65d69ebfe, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _Metallic: 0
+    - _Smoothness: 0
+    - _alphaCutout: 0.5
+    - _backFillAlpha: 1
+    - _backFillDark: 1
+    - _emissionPower: 0
+    - _roughColor: 0
+    - _roughOrientX: 0
+    - _roughOrientY: 0
+    - _roughOrientZ: 0
+    - _roughPos: 0
+    - _roughSize: 0.3
+    - _roughTwist: 0
+    - _splatBillboard: 0
+    - _splatSizeMult: 0.5
+    - _sssRadius: 1
+    - _subSurfaceScatter: 0
+    m_Colors:
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _emissiveColor: {r: 1, g: 1, b: 1, a: 1}
+    - _sssCenter: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1 &1576006607
 GameObject:
   m_ObjectHideFlags: 0
@@ -2620,7 +2987,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1584525417
 Transform:
   m_ObjectHideFlags: 0
@@ -2712,7 +3079,7 @@ MonoBehaviour:
   chunksX: 1
   chunksY: 1
   chunksZ: 1
-  material: {fileID: 497358135}
+  material: {fileID: 746839649}
   castShadows: 1
   receiveShadows: 1
   storeAssetPath: Clayxelhand
@@ -2725,58 +3092,6 @@ MonoBehaviour:
   claymationAnimClip: {fileID: 0}
   claymationStartFrame: 0
   claymationEndFrame: 0
---- !u!21 &1601221264
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Clayxels/ClayxelURPShaderMicroVoxelASE
-  m_Shader: {fileID: 4800000, guid: 7d346ac7e85afd94baf1ae981f60d88f, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: e1e6da454f95b40469ddddb65d69ebfe, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _texcoord:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _AlphaCutoff: 0.5
-    - _Metallic: 0
-    - _Smoothness: 0
-    - _alphaCutout: 0.5
-    - _backFillAlpha: 1
-    - _backFillDark: 1
-    - _emissionPower: 0
-    - _roughColor: 0
-    - _roughOrientX: 0
-    - _roughOrientY: 0
-    - _roughOrientZ: 0
-    - _roughPos: 0
-    - _roughSize: 0.3
-    - _roughTwist: 0
-    - _splatBillboard: 0
-    - _splatSizeMult: 0.5
-    - _sssRadius: 1
-    - _subSurfaceScatter: 0
-    m_Colors:
-    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _emissiveColor: {r: 1, g: 1, b: 1, a: 1}
-    - _sssCenter: {r: 0, g: 0, b: 0, a: 0}
-  m_BuildTextureStacks: []
 --- !u!1 &1648812753
 GameObject:
   m_ObjectHideFlags: 0
@@ -2870,7 +3185,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!21 &1682813080
+--- !u!21 &1704193071
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -3028,6 +3343,58 @@ MonoBehaviour:
   clayObjectId: 0
   numSolids: 1
   splineSubdiv: 3
+--- !u!21 &1746467879
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Clayxels/ClayxelURPShaderMicroVoxelASE
+  m_Shader: {fileID: 4800000, guid: 7d346ac7e85afd94baf1ae981f60d88f, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: e1e6da454f95b40469ddddb65d69ebfe, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _Metallic: 0
+    - _Smoothness: 0
+    - _alphaCutout: 0.5
+    - _backFillAlpha: 1
+    - _backFillDark: 1
+    - _emissionPower: 0
+    - _roughColor: 0
+    - _roughOrientX: 0
+    - _roughOrientY: 0
+    - _roughOrientZ: 0
+    - _roughPos: 0
+    - _roughSize: 0.3
+    - _roughTwist: 0
+    - _splatBillboard: 0
+    - _splatSizeMult: 0.5
+    - _sssRadius: 1
+    - _subSurfaceScatter: 0
+    m_Colors:
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _emissiveColor: {r: 1, g: 1, b: 1, a: 1}
+    - _sssCenter: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1 &1758962651
 GameObject:
   m_ObjectHideFlags: 0
@@ -3081,58 +3448,6 @@ MonoBehaviour:
   clayObjectId: 2
   numSolids: 1
   splineSubdiv: 3
---- !u!21 &1766175967
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Clayxels/ClayxelURPShaderMicroVoxelASE
-  m_Shader: {fileID: 4800000, guid: 7d346ac7e85afd94baf1ae981f60d88f, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: e1e6da454f95b40469ddddb65d69ebfe, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _texcoord:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _AlphaCutoff: 0.5
-    - _Metallic: 0
-    - _Smoothness: 0
-    - _alphaCutout: 0.5
-    - _backFillAlpha: 1
-    - _backFillDark: 1
-    - _emissionPower: 0
-    - _roughColor: 0
-    - _roughOrientX: 0
-    - _roughOrientY: 0
-    - _roughOrientZ: 0
-    - _roughPos: 0
-    - _roughSize: 0.3
-    - _roughTwist: 0
-    - _splatBillboard: 0
-    - _splatSizeMult: 0.5
-    - _sssRadius: 1
-    - _subSurfaceScatter: 0
-    m_Colors:
-    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _emissiveColor: {r: 1, g: 1, b: 1, a: 1}
-    - _sssCenter: {r: 0, g: 0, b: 0, a: 0}
-  m_BuildTextureStacks: []
 --- !u!1 &1798719224
 GameObject:
   m_ObjectHideFlags: 0
@@ -3149,7 +3464,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1798719225
 Transform:
   m_ObjectHideFlags: 0
@@ -3336,7 +3651,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blend: 0.0001
-  color: {r: 0.09897924, g: 0.41509432, b: 0.064613745, a: 1}
+  color: {r: 0.03573337, g: 0.20754719, b: 0.016642937, a: 1}
   attrs: {x: 0, y: 0, z: 0, w: 0}
   primitiveType: 2
   mode: 0
@@ -3864,6 +4179,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1910267255}
   - component: {fileID: 1910267256}
+  - component: {fileID: 1910267259}
+  - component: {fileID: 1910267258}
+  - component: {fileID: 1910267257}
   m_Layer: 0
   m_Name: table
   m_TagString: Untagged
@@ -3897,7 +4215,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1910267254}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf51d6fd97243134dbf9d48bd3107215, type: 3}
   m_Name: 
@@ -3905,17 +4223,17 @@ MonoBehaviour:
   customMaterial: {fileID: 0}
   forceUpdate: 0
   instanceOf: {fileID: 0}
-  needsUpdate: 0
+  needsUpdate: 1
   meshNormalSmooth: 60
   clayxelDetail: 88
   chunksX: 2
   chunksY: 2
   chunksZ: 2
-  material: {fileID: 1766175967}
+  material: {fileID: 569843990}
   castShadows: 1
   receiveShadows: 1
-  storeAssetPath: 
-  frozen: 0
+  storeAssetPath: table
+  frozen: 1
   clayObjectsOrderLocked: 1
   autoBounds: 0
   renderMode: 1
@@ -3924,6 +4242,70 @@ MonoBehaviour:
   claymationAnimClip: {fileID: 0}
   claymationStartFrame: 0
   claymationEndFrame: 0
+--- !u!64 &1910267257
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910267254}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 6dee4c5fd47408f49b13038f89e1500c, type: 2}
+--- !u!23 &1910267258
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910267254}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: ea98553f316616744911846986ff9433, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1910267259
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910267254}
+  m_Mesh: {fileID: 4300000, guid: 6dee4c5fd47408f49b13038f89e1500c, type: 2}
 --- !u!1 &1944646235
 GameObject:
   m_ObjectHideFlags: 0
@@ -3990,6 +4372,58 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &1989483827
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Clayxels/ClayxelURPShaderMicroVoxelASE
+  m_Shader: {fileID: 4800000, guid: 7d346ac7e85afd94baf1ae981f60d88f, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: e1e6da454f95b40469ddddb65d69ebfe, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _Metallic: 0
+    - _Smoothness: 0
+    - _alphaCutout: 0.5
+    - _backFillAlpha: 1
+    - _backFillDark: 1
+    - _emissionPower: 0
+    - _roughColor: 0
+    - _roughOrientX: 0
+    - _roughOrientY: 0
+    - _roughOrientZ: 0
+    - _roughPos: 0
+    - _roughSize: 0.3
+    - _roughTwist: 0
+    - _splatBillboard: 0
+    - _splatSizeMult: 0.5
+    - _sssRadius: 1
+    - _subSurfaceScatter: 0
+    m_Colors:
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _emissiveColor: {r: 1, g: 1, b: 1, a: 1}
+    - _sssCenter: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1 &1991433844
 GameObject:
   m_ObjectHideFlags: 0
@@ -4098,7 +4532,7 @@ MonoBehaviour:
   chunksX: 1
   chunksY: 1
   chunksZ: 1
-  material: {fileID: 1682813080}
+  material: {fileID: 1704193071}
   castShadows: 1
   receiveShadows: 1
   storeAssetPath: Clayxelhand
@@ -4127,7 +4561,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2122484213
 Transform:
   m_ObjectHideFlags: 0
