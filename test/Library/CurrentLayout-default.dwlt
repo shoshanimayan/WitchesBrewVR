@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Project
   m_RootView: {fileID: 7}
   m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 30
+  controlID: 43
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 18
+  controlID: 69
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 56
+  controlID: 42
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -631,22 +631,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/LPMBS-AI/Interior/5.Furniture
+    - Assets/frozen
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/LPMBS-AI/Interior/5.Furniture
+  - Assets/frozen
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Shosh\Documents\WitchesBrewVR\test
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 599}
-    m_SelectedIDs: d6700000
-    m_LastClickedID: 28886
-    m_ExpandedIDs: 00000000d85f0000666100006c6100007a6100007c610000ac640000ae640000be6c0000c46c0000ca6c0000846e0000a4700000aa700000ae700000b2700000b6700000ce700000d470000000ca9a3b
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 007d0000
+    m_LastClickedID: 32000
+    m_ExpandedIDs: 000000009a620000446400005a64000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -674,7 +674,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d85f0000
+    m_ExpandedIDs: 000000009a620000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -762,7 +762,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 180
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -796,9 +796,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 44c7feff
-      m_LastClickedID: -80060
-      m_ExpandedIDs: 18e2fdff9004feffdc20feff9045feff84a8feff36c7feff64d3feff96e5feffaefffeff7032ffff3449ffff26c9ffffb0ceffff18e7ffff90f9ffff4efbffff266400004464000050640000e86a0000fc6a0000206b00002c6b0000346b0000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 3cbdfeff60efffff1cf2ffff08f7ffff4efbffff346f000024700000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -858,9 +858,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 5.0625124, y: 0.8961673, z: 2.753692}
+    m_Target: {x: 8.731564, y: -2.4610748, z: -0.45382977}
     speed: 2
-    m_Value: {x: 5.0625124, y: 0.8961673, z: 2.753692}
+    m_Value: {x: 8.731564, y: -2.4610748, z: -0.45382977}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -907,13 +907,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.11684499, y: 0.6676567, z: -0.10733488, w: 0.727583}
+    m_Target: {x: 0.08235176, y: 0.8531578, z: -0.14252123, w: 0.49554628}
     speed: 2
-    m_Value: {x: 0.11807964, y: 0.6662978, z: -0.10814248, w: 0.72829235}
+    m_Value: {x: 0.08158697, y: 0.853141, z: -0.14120296, w: 0.4955357}
   m_Size:
-    m_Target: 1.6043406
+    m_Target: 5.834179
     speed: 2
-    m_Value: 1.3043406
+    m_Value: 6.134179
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -996,7 +996,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
