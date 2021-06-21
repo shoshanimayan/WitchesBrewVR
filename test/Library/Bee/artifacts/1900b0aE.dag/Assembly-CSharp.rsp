@@ -356,6 +356,8 @@
 "Assets/Clayxels/meshUtils/MeshUtils.cs"
 "Assets/Clayxels/Resources/RenderURP/MicroVoxelRenderFeature.cs"
 "Assets/Scripts/SimpleCameraController.cs"
+"Assets/Scripts/XR/HandController.cs"
+"Assets/Scripts/XR/MovementController.cs"
 "Assets/TutorialInfo/Scripts/Readme.cs"
 -langversion:8.0
 /unsafe+
