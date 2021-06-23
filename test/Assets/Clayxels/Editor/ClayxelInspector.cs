@@ -23,7 +23,7 @@ namespace Clayxels{
 
 			ClayContainer clayContainer = (ClayContainer)this.target;
 
-			EditorGUILayout.LabelField("Clayxels V1.6.2");
+			EditorGUILayout.LabelField("Clayxels V1.6.3");
 
 			EditorGUILayout.Space();
 
@@ -273,15 +273,17 @@ namespace Clayxels{
 			int currRenderMode = 0;
 
 			if(ClayxelInspector.extrasPanel){
-				if(ClayContainer.getRenderPipe() != "builtin"){
-					string[] renderLabels = {"polySplat", "microVoxelSplat"};
-					currRenderMode = clayContainer.getRenderMode();
-	 				int renderMode = EditorGUILayout.Popup("render mode", currRenderMode, renderLabels);
-	 				if(currRenderMode != renderMode){
-	 					clayContainer.setRenderMode(renderMode);
-	 					EditorSceneManager.MarkSceneDirty(SceneManager.GetActiveScene());
-	 				}
-				}
+				#if UNITY_EDITOR_WIN
+					if(ClayContainer.getRenderPipe() != "builtin"){
+						string[] renderLabels = {"polySplat", "microVoxelSplat"};
+						currRenderMode = clayContainer.getRenderMode();
+		 				int renderMode = EditorGUILayout.Popup("render mode", currRenderMode, renderLabels);
+		 				if(currRenderMode != renderMode){
+		 					clayContainer.setRenderMode(renderMode);
+		 					EditorSceneManager.MarkSceneDirty(SceneManager.GetActiveScene());
+		 				}
+					}
+				#endif
 
 				EditorGUILayout.Space();
 
@@ -1210,6 +1212,37 @@ public class ClayxelsPrefsWindow : EditorWindow{
 		GUI.backgroundColor = defaultColor;
     }
 
+    public class ClayxelsMessageWindow : EditorWindow{
+		static string message = "";
+
+	    public static void Open(string msg){
+	    	ClayxelsMessageWindow.message = msg;
+
+	        ClayxelsMessageWindow window = (ClayxelsMessageWindow)EditorWindow.GetWindow(typeof(ClayxelsMessageWindow));
+	        window.titleContent = new GUIContent("Clayxels Message");
+	        window.minSize = new Vector2(500, 200);
+	        window.maxSize = new Vector2(500, 200);
+	        window.Show();
+	    }
+
+	    void OnGUI(){
+	    	EditorGUILayout.Space();
+
+	    	GUIStyle s = new GUIStyle();
+			s.wordWrap = true;
+
+	    	EditorGUILayout.LabelField(ClayxelsMessageWindow.message, s);
+
+	    	EditorGUILayout.Space();
+	    	EditorGUILayout.Space();
+			
+			GUILayout.FlexibleSpace();
+			if(GUILayout.Button("Ok")){
+				this.Close();
+			}
+    	}
+    }
+
     [InitializeOnLoad]
 	public class ClayxelsEditorInit{
 	    static ClayxelsEditorInit(){
@@ -1274,7 +1307,26 @@ public class ClayxelsPrefsWindow : EditorWindow{
 			}
 			else{
 				ClayxelsEditorInit.checkPackage("BuiltIn");
+
+				if(!ClayxelsEditorInit.checkDefined("CLAYXELS_BUILTIN")){
+					#if UNITY_EDITOR_WIN
+						ClayxelsMessageWindow.Open("Hi! Clayxels has a faster and better looking renderer\nwhen using the URP and HDRP render pipelines.\nPlease consider switching pipeline to get the best out of this tool.\nBye!");
+					#else
+						ClayxelsMessageWindow.Open("Hi! Clayxels on Mac OS is meant to be used from the URP or HDRP render pipelines.\nWe're working hard to maximize compatibility,but for now please consider switching to one of the new render pipelines.\nThanks!");
+					#endif
+				}
+
+				ClayxelsEditorInit.setDefine("CLAYXELS_BUILTIN");
 			}
+	    }
+
+	    static bool checkDefined(string defstr){
+	    	string currDefines = PlayerSettings.GetScriptingDefineSymbolsForGroup( EditorUserBuildSettings.selectedBuildTargetGroup);
+	        if(!currDefines.Contains(defstr)){
+	        	return false;
+	        }
+
+	        return true;
 	    }
 
 	    static void setDefine(string defstr){

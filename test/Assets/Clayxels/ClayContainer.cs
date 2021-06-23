@@ -336,8 +336,20 @@ namespace Clayxels{
 
 			ClayContainer.releaseGlobalBuffers();
 
+			#if UNITY_EDITOR// fix reimport issues on unity 2020+
+				if(Resources.Load("clayCoreLock") != null){
+					AssetDatabase.ImportAsset(AssetDatabase.GetAssetPath(Resources.Load("clayCoreLock")), ImportAssetOptions.ForceUpdate);
+					AssetDatabase.ImportAsset(AssetDatabase.GetAssetPath(Resources.Load("clayxelMicroVoxelUtils")), ImportAssetOptions.ForceUpdate);
+				}
+			#endif
+
 			UnityEngine.Object clayCore = Resources.Load("clayCoreLock");
 			if(clayCore == null){
+				#if UNITY_EDITOR// fix reimport issues on unity 2020+
+					AssetDatabase.ImportAsset(AssetDatabase.GetAssetPath(Resources.Load("clayCore")), ImportAssetOptions.ForceUpdate);
+					AssetDatabase.ImportAsset(AssetDatabase.GetAssetPath(Resources.Load("clayxelMicroVoxelUtils")), ImportAssetOptions.ForceUpdate);
+				#endif
+
 				clayCore = Resources.Load("clayCore");
 			}
 
@@ -1068,7 +1080,12 @@ namespace Clayxels{
 			ClayContainer.collectClayObjectsRecursive(this.gameObject, ref objs);
 			
 			for(int i = 0; i < objs.Count; ++i){
-				objs[i].SetActive(state);
+				GameObject obj = objs[i];
+
+				if(obj.GetComponent<ClayObject>().enabled){
+					// only reactivate clayObjects that haven't been disabled by the user
+					obj.SetActive(state);
+				}
 			}
 		}
 
@@ -2231,18 +2248,25 @@ namespace Clayxels{
 			ClayContainer.defaultAssetsPath = prefs.defaultAssetsPath;
 
 			if(!ClayContainer.microvoxelRTSizeOverridden){
+				int cameraWidth = 2048;
+				int cameraHeight = 2048;
+				if(Camera.main != null){
+					cameraWidth = Camera.main.pixelWidth;
+					cameraHeight = Camera.main.pixelHeight;
+				}
+
 				if(prefs.renderSize.x < 512){
 					prefs.renderSize.x = 512;
 				}
-				else if(prefs.renderSize.x > Camera.main.pixelWidth){
-					prefs.renderSize.x = Camera.main.pixelWidth;	
+				else if(prefs.renderSize.x > cameraWidth){
+					prefs.renderSize.x = cameraWidth;	
 				}
 
 				if(prefs.renderSize.y < 512){
 					prefs.renderSize.y = 512;
 				}
-				else if(prefs.renderSize.y > Camera.main.pixelHeight){
-					prefs.renderSize.y = Camera.main.pixelHeight;	
+				else if(prefs.renderSize.y > cameraHeight){
+					prefs.renderSize.y = cameraHeight;	
 				}
 				
 				ClayContainer.microvoxelRTSizeOverride = prefs.renderSize;
@@ -2601,12 +2625,6 @@ namespace Clayxels{
 
 				ClayContainer.containersInScene.Add(containers[i]);
 			}
-
-			// if(previousCount == 0 && ClayContainer.containersInScene.Count > 0){
-			// 	if(ClayContainer.renderPipelineInitCallback != null){
-	  //       		ClayContainer.renderPipelineInitCallback();
-	  //       	}
-			// }
 		}
 
 		void OnDestroy(){
@@ -2618,11 +2636,6 @@ namespace Clayxels{
 			
 			if(ClayContainer.containersInScene.Count == 0){
 				ClayContainer.releaseGlobalBuffers();
-
-				// cleanupMicrovoxels pass
-				// if(ClayContainer.renderPipelineInitCallback != null){
-				// 	ClayContainer.renderPipelineInitCallback();
-				// }
 			}
 
 			#if UNITY_EDITOR
@@ -2635,6 +2648,7 @@ namespace Clayxels{
 		void releaseBuffers(){
 			for(int i = 0; i < this.compBuffers.Count; ++i){
 				this.compBuffers[i].Release();
+				this.compBuffers[i].Dispose();
 			}
 
 			this.compBuffers.Clear();

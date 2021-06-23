@@ -39,7 +39,7 @@ public class MicroVoxelRenderFeature : UnityEngine.Rendering.Universal.Scriptabl
     
     public override void Create(){
         m_ScriptablePass1 = new MicroVoxelRenderPassURP();
-        m_ScriptablePass1.renderPassEvent = UnityEngine.Rendering.Universal.RenderPassEvent.BeforeRenderingPrePasses;
+        m_ScriptablePass1.renderPassEvent = UnityEngine.Rendering.Universal.RenderPassEvent.BeforeRenderingPrepasses;
     }
    
     // Here you can inject one or multiple render passes in the renderer.
@@ -76,7 +76,7 @@ namespace Clayxels{
         static void init(){
             string forwardPipeAssetPath = "Assets/Settings/ForwardRenderer.asset";
             UnityEngine.Rendering.Universal.ScriptableRendererData forwardPipeData = AssetDatabase.LoadAssetAtPath<UnityEngine.Rendering.Universal.ScriptableRendererData>(forwardPipeAssetPath);
-
+            Debug.Log(forwardPipeData.rendererFeatures);
             List<UnityEngine.Rendering.Universal.ScriptableRendererFeature> passes = forwardPipeData.rendererFeatures;
 
             List<UnityEngine.Rendering.Universal.ScriptableRendererFeature> toRemove = new List<UnityEngine.Rendering.Universal.ScriptableRendererFeature>();

@@ -24,6 +24,11 @@ Tips:
 - Hit "p" on your keyboard to pick-select clay objects from the viewport (only needed for polySplats render mode)
 
 Change log:
+v1.6.3
+- Fixed compute shader reload mechanism for newer Unity versions
+- Updated some example scenes that were left behind on v1.6
+- Added warning window when clayxels is first imported in Builtin
+
 v1.6.2
 - URP removed the need for any manual config with the render-pass
 - enlarged global blend setting, now ranges from 0.0 to 2.0 and defaults to 1.0
