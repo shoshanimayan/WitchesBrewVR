@@ -8,7 +8,6 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class HandController : MonoBehaviour
 {
     [SerializeField] InputActionReference controllerActionGrip;
-    [SerializeField] InputActionReference controllerActionTrigger;
     [SerializeField] Mesh closedHand;
     [SerializeField] Mesh openHand;
 
@@ -16,9 +15,7 @@ public class HandController : MonoBehaviour
     private void Awake()
     {
         controllerActionGrip.action.started += Toggle;
-        controllerActionTrigger.action.started += Toggle;
         controllerActionGrip.action.canceled += Untoggle;
-        controllerActionTrigger.action.canceled += Untoggle;
 
     }
 

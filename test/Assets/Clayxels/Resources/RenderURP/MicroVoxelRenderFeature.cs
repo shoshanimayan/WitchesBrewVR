@@ -39,7 +39,7 @@ public class MicroVoxelRenderFeature : UnityEngine.Rendering.Universal.Scriptabl
     
     public override void Create(){
         m_ScriptablePass1 = new MicroVoxelRenderPassURP();
-        m_ScriptablePass1.renderPassEvent = UnityEngine.Rendering.Universal.RenderPassEvent.BeforeRenderingPrepasses;
+        m_ScriptablePass1.renderPassEvent = UnityEngine.Rendering.Universal.RenderPassEvent.BeforeRenderingPrePasses;
     }
    
     // Here you can inject one or multiple render passes in the renderer.
