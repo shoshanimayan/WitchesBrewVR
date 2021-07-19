@@ -21,8 +21,32 @@ MonoBehaviour:
     m_Address: base1
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 102900000, guid: 55a500619e45c5b41aebeeffb153fd88, type: 3}
-    m_TargetAsset: {fileID: 102900000, guid: 55a500619e45c5b41aebeeffb153fd88, type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 448c06036137d9445992cba4402b68c8
+    m_Address: Menu
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 24f190c5ec12ee747ad3d4f4ae838cb6
+    m_Address: Potion_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 7850251364733942858, guid: 24f190c5ec12ee747ad3d4f4ae838cb6, type: 3}
+    m_TargetAsset: {fileID: 7850251364733942858, guid: 24f190c5ec12ee747ad3d4f4ae838cb6, type: 3}
+  - m_GUID: e1ba15ea06921894a89dc19078558f09
+    m_Address: Potion_2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 7850251364733942858, guid: e1ba15ea06921894a89dc19078558f09, type: 3}
+    m_TargetAsset: {fileID: 7850251364733942858, guid: e1ba15ea06921894a89dc19078558f09, type: 3}
+  - m_GUID: e2e9ffd038704b949b669ad571ae1f06
+    m_Address: Potion_3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 7850251364733942858, guid: e2e9ffd038704b949b669ad571ae1f06, type: 3}
+    m_TargetAsset: {fileID: 7850251364733942858, guid: e2e9ffd038704b949b669ad571ae1f06, type: 3}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: ea70f89e82ded8c46831a686f8b5d554, type: 2}
   m_SchemaSet:

@@ -76,7 +76,7 @@ namespace Clayxels{
         static void init(){
             string forwardPipeAssetPath = "Assets/Settings/ForwardRenderer.asset";
             UnityEngine.Rendering.Universal.ScriptableRendererData forwardPipeData = AssetDatabase.LoadAssetAtPath<UnityEngine.Rendering.Universal.ScriptableRendererData>(forwardPipeAssetPath);
-            Debug.Log(forwardPipeData.rendererFeatures);
+
             List<UnityEngine.Rendering.Universal.ScriptableRendererFeature> passes = forwardPipeData.rendererFeatures;
 
             List<UnityEngine.Rendering.Universal.ScriptableRendererFeature> toRemove = new List<UnityEngine.Rendering.Universal.ScriptableRendererFeature>();

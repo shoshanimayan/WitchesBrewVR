@@ -39,7 +39,15 @@ public class SceneLoader : MonoBehaviour
     void Start()
     {
         Addressables.LoadSceneAsync(firstScene, UnityEngine.SceneManagement.LoadSceneMode.Additive).Completed += SceneLoadCompleted;
+
     }
+
+    public void FirstLoad()
+    {
+        Addressables.LoadSceneAsync(firstScene, UnityEngine.SceneManagement.LoadSceneMode.Additive).Completed += SceneLoadCompleted;
+
+    }
+
     // Start is called before the first frame update
     public void Load(AssetReference scene)
     {
