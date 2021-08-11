@@ -11,7 +11,7 @@ public class Base_WaterColor : MonoBehaviour
     private ParticleSystem _particleSystem;
     void Awake()
     {
-        _particleSystem = gameObject.GetComponent<ParticleSystem>();
+        _particleSystem = GetComponent<ParticleSystem>();
         ApplyColor(false);
     }
 
@@ -33,8 +33,10 @@ public class Base_WaterColor : MonoBehaviour
         gameObject.GetComponent<Renderer>().material = _materials[index];
         if (smoke)
         {
+            //ParticleSystemRenderer pr = _particleSystem.GetComponent<ParticleSystemRenderer>();
             ParticleSystem.MainModule main = _particleSystem.main;
             main.startColor = new ParticleSystem.MinMaxGradient(_colors[index]);
+           // pr.material= _materials[index]; 
             _particleSystem.Play();
 
         }
