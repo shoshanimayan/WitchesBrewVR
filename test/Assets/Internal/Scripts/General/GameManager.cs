@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static int[] completedSteps = { 2,2,1 };
+    public static int[] completedSteps = { 1,1,1 };
     ///
     // 0 is activity has not been started
     //1 activity completed and potion availible

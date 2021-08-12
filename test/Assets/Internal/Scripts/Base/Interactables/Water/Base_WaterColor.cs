@@ -7,21 +7,29 @@ public class Base_WaterColor : MonoBehaviour
 
     [SerializeField] private Material[] _materials;
     [SerializeField] private Color[] _colors;
+    [SerializeField]private ParticleSystem _particleSystem;
+    private Base_EndHandler _end;
 
-    private ParticleSystem _particleSystem;
-    void Awake()
+    private void Awake()
     {
-        _particleSystem = GetComponent<ParticleSystem>();
+        _end = GetComponent<Base_EndHandler>();
+
         ApplyColor(false);
     }
 
-  
 
-    
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            ApplyColor(true);
+        }
+    }
+
 
     public void ApplyColor(bool smoke=true)
     {
-        int index=0;
+        int index=-1;
         for (int i = 0; i < GameManager.completedSteps.Length; i++)
         {
             if (GameManager.completedSteps[i] >= 2)
@@ -29,16 +37,22 @@ public class Base_WaterColor : MonoBehaviour
                 index++;
             }
         }
-
-        gameObject.GetComponent<Renderer>().material = _materials[index];
-        if (smoke)
+        if (index >= 0)
         {
-            //ParticleSystemRenderer pr = _particleSystem.GetComponent<ParticleSystemRenderer>();
-            ParticleSystem.MainModule main = _particleSystem.main;
-            main.startColor = new ParticleSystem.MinMaxGradient(_colors[index]);
-           // pr.material= _materials[index]; 
-            _particleSystem.Play();
+            Debug.Log(index);
+            Debug.Log(_materials.Length);
+            gameObject.GetComponent<Renderer>().material = _materials[index];
+            if (smoke)
+            {
+                ParticleSystem.MainModule main = _particleSystem.main;
+                main.startColor = new ParticleSystem.MinMaxGradient(new Color(_colors[index].r, _colors[index].g, _colors[index].b, 100));
+                _particleSystem.gameObject.SetActive(true);
 
+            }
+            if (index >= GameManager.completedSteps.Length-1)
+            {
+                _end.InitiateEnding(_particleSystem.main.duration);
+            }
         }
     }
 }

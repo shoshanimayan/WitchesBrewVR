@@ -6,10 +6,11 @@ public class Base_PotionHandler : MonoBehaviour
 {
     [SerializeField] private AssetReference[] prefabReference ={};
     [SerializeField] private Transform[] prefabPlaces = { };
+ 
 
-    // Start is called before the first frame update
     void Start()
     {
+        
         for (int i = 0; i < GameManager.completedSteps.Length; i++)
         {
             if (GameManager.completedSteps[i] == 1)
@@ -32,6 +33,8 @@ public class Base_PotionHandler : MonoBehaviour
             GameObject temp_potionObj = obj.Result;
             Base_Potion temp_potionClass = temp_potionObj.GetComponent<Base_Potion>();
             temp_potionClass.origin = temp_potionObj.transform.position;
+            temp_potionClass.eulerOrigin = temp_potionObj.transform.localEulerAngles;
+
             temp_potionClass.index = index;
         }
     }

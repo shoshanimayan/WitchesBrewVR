@@ -70,17 +70,7 @@ public class SceneLoader : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-   /*
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.X) && !unloaded)
-        {
-            unloaded = true;
-            UnloadScene();
-        }
-    }
-    */
+ 
 
     void UnloadScene()
     {

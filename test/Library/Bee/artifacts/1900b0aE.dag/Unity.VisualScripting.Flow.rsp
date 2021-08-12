@@ -106,6 +106,7 @@
 -define:ENABLE_TILEMAP
 -define:ENABLE_TIMELINE
 -define:ENABLE_INPUT_SYSTEM
+-define:ENABLE_LEGACY_INPUT_MANAGER
 -define:CLAYXELS_URP
 -define:CLAYXELS_RETOPO
 -define:PACKAGE_INPUT_SYSTEM_EXISTS
@@ -319,7 +320,6 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VisualScripting.Core.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
--analyzer:"Library/PackageCache/com.unity.visualscripting@1.6.1/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
 "Library/PackageCache/com.unity.visualscripting@1.6.1/Runtime/VisualScripting.Flow/Connections/ControlConnection.cs"
 "Library/PackageCache/com.unity.visualscripting@1.6.1/Runtime/VisualScripting.Flow/Connections/InvalidConnection.cs"
 "Library/PackageCache/com.unity.visualscripting@1.6.1/Runtime/VisualScripting.Flow/Connections/IUnitConnection.cs"
