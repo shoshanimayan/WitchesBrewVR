@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Internal/Scenes/base1.unity
+- path: Assets/Internal/Scenes/Robot/RobotHead.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
